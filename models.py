@@ -100,10 +100,10 @@ def main(method_name,iterations):
         if (X.shape[1] == 2):
             plot_cost(list_cost)
             plt.savefig(args.path + "All_cost_cuve.png")
-            # plt.show()
+            plt.show()
     else:
             model = GradientDescentLinearRegression(args.lr, max_iterations=iterations).fit(X, y, method_name,False)       
             if (X.shape[1] == 2):
                 plot_cost_one(model,method_name)
                 plt.savefig(args.path +method_name+ "_cost_cuve.png")
-                # plt.show()               
+                plt.show()               
