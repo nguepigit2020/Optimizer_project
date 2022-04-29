@@ -87,23 +87,23 @@ class GradientDescentLinearRegression:
         
         return self
 
-def main(method_name,iterations):
-    print(iterations)
-    X = data.iris.data[:, :2] 
-    y = data.iris.target    
-    Methode_list = ["standard","momentum","adagrad","rmsprop","adam"]
-    if method_name == 'all':
-        list_cost = []
-        for method in Methode_list:
-            model = GradientDescentLinearRegression(args.lr, max_iterations=iterations).fit(X, y, method,True)
-            list_cost.append(model.cost_hist)
-        if (X.shape[1] == 2):
-            plot_cost(list_cost)
-            plt.savefig(args.path + "All_cost_cuve.png")
-            plt.show()
-    else:
-            model = GradientDescentLinearRegression(args.lr, max_iterations=iterations).fit(X, y, method_name,False)       
-            if (X.shape[1] == 2):
-                plot_cost_one(model,method_name)
-                plt.savefig(args.path +method_name+ "_cost_cuve.png")
-                plt.show()               
+# def main(method_name,iterations):
+#     print(iterations)
+#     X = data.iris.data[:, :2] 
+#     y = data.iris.target    
+#     Methode_list = ["standard","momentum","adagrad","rmsprop","adam"]
+#     if method_name == 'all':
+#         list_cost = []
+#         for method in Methode_list:
+#             model = GradientDescentLinearRegression(args.lr, max_iterations=iterations).fit(X, y, method,True)
+#             list_cost.append(model.cost_hist)
+#         if (X.shape[1] == 2):
+#             plot_cost(list_cost)
+#             plt.savefig(args.path + "All_cost_cuve.png")
+#             plt.show()
+#     else:
+#             model = GradientDescentLinearRegression(args.lr, max_iterations=iterations).fit(X, y, method_name,False)       
+#             if (X.shape[1] == 2):
+#                 plot_cost_one(model,method_name)
+#                 plt.savefig(args.path +method_name+ "_cost_cuve.png")
+#                 plt.show()               

@@ -2,4 +2,5 @@ data/
    __pycache__/
 project/
 /model/  
-__pycache__/ 
+/__pycache__/ 
+.DS_Store
